@@ -1,13 +1,21 @@
 {
-  "name": "client",
+  "name": "react-forcast",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
+    "bootstrap": "^3.3.7",
+    "gh-pages": "^1.2.0",
+    "moment": "^2.22.2",
+    "react": "^16.4.0",
+    "react-bootstrap": "^0.32.1",
+    "react-dom": "^16.4.0",
+    "react-ionicons": "^2.1.6",
+    "react-moment": "^0.7.9",
     "react-scripts": "1.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
