@@ -152,7 +152,7 @@ button:active {
 
 .card--content {
   background-color: transparent;
-  min-width: 50%;
+  min-width: 46%;
   margin-top: 15px;
   margin-left: 5px;
   margin-right: 5px;
@@ -162,9 +162,13 @@ button:active {
   justify-content: center;
   align-items: center;
   border-radius: 2px;
-  border-style: solid;
-  border-color: darkgray;
-  border-width: thin;
+  border-right-style: solid;
+  border-right-color: darkgrey;
+  border-right-width: thin;
+  padding-right: 2px;
+  /*border-style: solid;*/
+  /*border-color: darkgray;*/
+  /*border-width: thin;*/
 }
 
 .card::-webkit-scrollbar {
@@ -178,11 +182,12 @@ button:active {
   min-width: 50%;
 }
 
-card--content--right{
+.card--content--right{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-width: 50%;
 }
 
 .forecast_value{
