@@ -2,6 +2,7 @@
   "name": "react-forcast",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://xmannyxfreshx1.github.io/Weather-Forecast",
   "dependencies": {
     "bootstrap": "^3.3.7",
     "gh-pages": "^1.2.0",
