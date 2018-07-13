@@ -127,14 +127,14 @@ class App extends Component {
                                         error={this.state.error}
                                     />
                                     {this.state.weatherClicked && <button onClick={this.getForecast}>5-Day Forecast</button>}
-                                    <div className="forecast">
+                                    <div className="col-xs-7 forecast">
                                         <div className="card">
 
                                             {this.state.forecastClicked && newList.map((value, index, array) =>
 
                                                 <div key={index}  className="card--content">
                                                     <div className="card--content--left">
-                                                        <Ionicon color={"white"} fontSize={"60px"} icon={iconNames[value.weather[0].main]}/>
+                                                        <Ionicon color={"white"} fontSize={"100px"} icon={iconNames[value.weather[0].main]}/>
                                                     </div>
 
                                                     <div className="card--content--right">

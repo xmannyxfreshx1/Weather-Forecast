@@ -15,7 +15,7 @@ const iconNames = {
 const Titles = props => (
     <div>
         <h1 className="title-container__title">Weather Finder</h1>
-        {props.weatherClicked && <Ionicon color={"white"} fontSize={"300px"} icon={iconNames[props.weatherState]} />}
+        {props.weatherClicked && <Ionicon color={"white"} fontSize={"350px"} icon={iconNames[props.weatherState]} />}
         <p className="title-container__subtitle">Find current weather, 5-day forecast, and more</p>
     </div>
 );
