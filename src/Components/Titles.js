@@ -9,6 +9,7 @@ const iconNames = {
     Clouds: 'ios-cloudy' ,
     Snow: 'ios-snow' ,
     Drizzle: 'ios-umbrella' ,
+    Alert: 'ios-alert'
 };
 
 

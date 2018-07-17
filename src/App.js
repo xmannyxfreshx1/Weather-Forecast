@@ -48,12 +48,14 @@ class App extends Component {
         if(data.cod === '404') {
             this.setState({
                 temperature: null,
-                weather:null,
+                weather:'Alert',
                 city: null,
                 country: null,
                 humidity: null,
                 description: null,
-                error: "ENTER A VALID CITY AND COUNTRY"
+                error: "ENTER A VALID CITY AND COUNTRY",
+                forecastClicked: false,
+                weatherClicked: true,
             });
 
             console.log(data);
@@ -82,14 +84,17 @@ class App extends Component {
             this.setState({
                 list: null,
                 forecastClicked: false,
-                error: "ENTER A VALID CITY AND COUNTRY"
+                error: "ENTER A VALID CITY AND COUNTRY",
+                weatherClicked: true
             })
         }else {
 
 
             this.setState({
                 list: data.list,
-                forecastClicked: true
+                forecastClicked: true,
+                weatherClicked: true,
+                error:""
             });
         }
 
@@ -125,7 +130,7 @@ class App extends Component {
                         <div className="container-fluid">
                             <div className="row">
                                 <div className="col-xs-5 title-container">
-                                    <Titles weatherClicked={this.state.weatherClicked} weatherState={this.state.weather}/>
+                                    <Titles error = {this.state.error} weatherClicked={this.state.weatherClicked} weatherState={this.state.weather}/>
                                 </div>
                                 <div className="col-xs-7 form-container">
                                     <Form getWeather={this.getWeather}/>
