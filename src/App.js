@@ -77,10 +77,21 @@ class App extends Component {
         const country = this.state.country;
         const api_call = await fetch (`https://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&appid=3a5fbdb21d0c6479ff9cff57c0e067bc&units=imperial`);
         const data = await api_call.json();
-        this.setState({
-            list: data.list,
-            forecastClicked: true
-        });
+
+        if(data.cod === '404'){
+            this.setState({
+                list: null,
+                forecastClicked: false,
+                error: "ENTER A VALID CITY AND COUNTRY"
+            })
+        }else {
+
+
+            this.setState({
+                list: data.list,
+                forecastClicked: true
+            });
+        }
 
     };
 
